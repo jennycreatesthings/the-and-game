@@ -52,6 +52,7 @@ const questions = [
 ];
 
 function displayQuestion() {
+    console.log('Displaying a new question.');
     // Get a random question index
     const randomIndex = Math.floor(Math.random() * questions.length);
     // Select the question and number using that index
