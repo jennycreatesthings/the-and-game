@@ -51,20 +51,23 @@ const questions = [
     { number: "50", text: "How do you envision the future of our relationship?" }
 ];
 
-let currentQuestionIndex = 0;
-
 function displayQuestion() {
+    // Get a random question index
+    const randomIndex = Math.floor(Math.random() * questions.length);
+    // Select the question and number using that index
+    const question = questions[randomIndex];
+
+    // Find the question and number elements in the DOM
     const questionElement = document.getElementById('question');
     const questionNumberElement = document.getElementById('question-number');
-    const currentQuestion = questions[currentQuestionIndex];
-    
-    questionElement.textContent = currentQuestion.text;
-    questionNumberElement.textContent = currentQuestion.number;
-    
-    currentQuestionIndex = (currentQuestionIndex + 1) % questions.length; // Loop back to the first question
+
+    // Update the DOM elements with the question text and number
+    questionElement.textContent = question.text;
+    questionNumberElement.textContent = question.number;
 }
 
+// Attach an event listener to the 'Next Question' button
 document.getElementById('nextQuestion').addEventListener('click', displayQuestion);
 
-// Initialize with the first question
+// Display the first question when the script loads
 displayQuestion();
