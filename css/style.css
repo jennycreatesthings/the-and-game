@@ -1,79 +1,100 @@
-/* General Body Styles */
+/* Reset some default styles */
+body, h1, p, div, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Apply a full height to the body with Flexbox to center content vertically and horizontally */
 body {
-    background-color: #ffffff; /* White background */
-    color: #333333; /* Slightly off-black text for easier reading */
-    font-family: 'Helvetica', 'Arial', sans-serif; /* Clean, sans-serif font */
+    background-color: #FADCD9; /* Pastel pink background */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern, sans-serif font */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px; /* Add some padding around the edges */
 }
 
-/* Container for Centering Content */
+/* Center the content in a flex container */
 .container {
-    max-width: 800px; /* Good width for readability */
-    margin: 0 auto; /* Center the container */
-    padding: 20px; /* Padding around the content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Header Styles */
+/* Style the heading */
 h1 {
-    font-size: 2em; /* Large, prominent size */
-    text-align: center; /* Center-align the title */
-    margin-bottom: 0.5em; /* Spacing below the title */
+    color: #FB5581; /* A darker shade of pink for the heading */
+    font-size: 2.5em; /* Larger font size for the heading */
+    margin-bottom: 0.5em; /* Space below the heading */
 }
 
-/* Paragraph Styles */
+/* Style the subheading */
 p {
-    font-size: 1em; /* Standard font size */
-    line-height: 1.5; /* Space between lines for readability */
-    text-align: center; /* Center-align text */
-    margin-bottom: 1.5em; /* Spacing below paragraphs */
+    color: #333; /* Darker text color for contrast */
+    font-size: 1em; /* Standard font size for the paragraph */
+    margin-bottom: 2em; /* Space below the paragraph */
 }
 
-/* Question Box Styles */
+/* Style the question container */
+#question-container {
+    background-color: #fff; /* White background for the question container */
+    border-radius: 15px; /* Rounded corners for the container */
+    padding: 2em; /* Padding inside the container */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    margin-bottom: 2em; /* Space below the container */
+    position: relative; /* To position the number absolutely inside this container */
+    width: 100%; /* Full width */
+    max-width: 500px; /* Maximum width of the container */
+}
+
+/* Style the question text */
 #question {
-    background-color: #f8f8f8; /* Light grey background for the question box */
-    color: #222222; /* Darker text for contrast */
-    padding: 20px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-    margin-bottom: 2em; /* Spacing below the question box */
+    color: #333; /* Darker text color for the question */
+    font-size: 1.25em; /* Larger font size for the question */
 }
 
-/* Button Styles */
+/* Style the large question number */
+#question-number {
+    color: #FB5581; /* A darker shade of pink for the number */
+    font-size: 5em; /* Very large font size for the number */
+    position: absolute; /* Position absolutely to place it outside the container */
+    top: -1em; /* Move up to hang over the top of the container */
+    right: -1em; /* Move right to hang over the side of the container */
+}
+
+/* Style the button */
 button {
-    background-color: #333333; /* Black background for the button */
-    color: #ffffff; /* White text for contrast */
-    padding: 10px 20px;
-    border: none; /* No border */
-    border-radius: 5px; /* Slightly rounded corners */
-    font-size: 1em;
-    cursor: pointer; /* Cursor changes to pointer to indicate it's clickable */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    background-color: #FB5581; /* Darker pink for the button */
+    color: #fff; /* White text color for the button */
+    padding: 1em 2em; /* Padding inside the button */
+    border-radius: 9999px; /* Fully rounded corners for the button */
+    font-size: 1em; /* Standard font size for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for the background color */
 }
 
-button:hover {
-    background-color: #444444; /* Slightly lighter black on hover */
+/* Button hover and focus styles */
+button:hover, button:focus {
+    background-color: #ff669a; /* Lighter pink on hover/focus */
+    outline: none; /* Remove outline on focus */
 }
 
-/* Focus Styles for Accessibility */
-button:focus {
-    outline: 2px solid #555555; /* Outline when the button is focused */
-}
-
-/* Responsive design: Adjusts the font size for smaller devices */
+/* Responsive styles */
 @media (max-width: 600px) {
     h1 {
-        font-size: 1.75em;
+        font-size: 2em; /* Slightly smaller font size for the heading */
     }
-
-    p {
-        font-size: 0.9em;
-    }
-
     #question {
-        padding: 15px;
+        font-size: 1em; /* Slightly smaller font size for the question */
     }
-
+    #question-number {
+        font-size: 3em; /* Smaller font size for the large number */
+        top: -0.5em; /* Adjust the position for smaller screens */
+        right: -0.5em; /* Adjust the position for smaller screens */
+    }
     button {
-        padding: 8px 16px;
-        font-size: 0.9em;
+        padding: 0.75em 1.5em; /* Slightly less padding inside the button */
     }
 }
