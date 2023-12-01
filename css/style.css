@@ -111,4 +111,10 @@ button:hover, button:focus {
     }
     #question-number {
         font-size: 4rem; /* Further reduced font size for very small screens */
-        transform: translate(30%, -50%); /* Adjust position to keep it within the container
+        transform: translate(30%, -50%); /* Adjust position to keep it within the container bounds */
+    }
+    button {
+        padding: 0.75rem 1rem;
+        font-size: 0.8rem;
+    }
+}
