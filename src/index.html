@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The And Game - Dating Edition</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Ensure this path is correct -->
 </head>
-<body class="bg-gray-100">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center my-8">The And Game - Dating Edition</h1>
-        <p class="text-center text-md sm:text-lg mb-8">Explore deep connections with thoughtful questions.</p>
-        <div id="question" class="text-lg sm:text-xl md:text-2xl text-center my-8 p-4 bg-white shadow-lg rounded-lg"></div>
-        <div class="text-center">
-            <button id="nextQuestion" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 sm:py-3 sm:px-6 rounded focus:outline-none focus:shadow-outline">
-                Next Question
-            </button>
+<body class="bg-pink-100 min-h-screen flex items-center justify-center">
+    <div class="p-4">
+        <h1 class="text-4xl font-bold text-pink-600 mb-2">The And Game - Dating Edition</h1>
+        <p class="text-gray-700 mb-4">Explore deep connections with thoughtful questions.</p>
+        <div id="question-container" class="bg-white p-6 rounded-lg shadow-md relative">
+            <div id="question-number" class="text-9xl font-bold text-pink-200 absolute top-0 right-0 -mr-12 -mt-12">01</div>
+            <div id="question" class="text-xl font-medium text-gray-800">Your question will appear here.</div>
         </div>
+        <button id="nextQuestion" class="bg-pink-500 text-white mt-6 py-2 px-6 rounded-full font-bold hover:bg-pink-600 focus:outline-none shadow-lg transform active:scale-95 transition duration-150">Next Question</button>
     </div>
-    <script src="../js/script.js"></script>
+    <script src="js/script.js"></script> <!-- Ensure this path is correct -->
 </body>
 </html>
