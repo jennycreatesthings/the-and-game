@@ -57,11 +57,13 @@ p {
 /* Style the large question number */
 #question-number {
     color: #FB5581; /* A darker shade of pink for the number */
-    font-size: 8rem; /* Very large font size for the number */
+    font-size: 6rem; /* Adjusted font size for the number */
     position: absolute; /* Position absolutely to place it outside the container */
-    top: -1rem; /* Move up to hang over the top of the container */
-    right: -1rem; /* Move right to hang over the side of the container */
+    top: 50%; /* Center vertically */
+    right: 0; /* Align to the right edge of the container */
+    transform: translate(50%, -50%); /* Adjust the placement to float over the right edge */
     opacity: 0.2; /* Light opacity for the number */
+    z-index: -1; /* Place it behind the text box */
 }
 
 /* Style the button */
@@ -89,7 +91,7 @@ button:hover, button:focus {
         font-size: 2rem; /* Smaller font size for the heading */
     }
     #question-number {
-        font-size: 6rem; /* Smaller font size for the large number */
+        font-size: 5rem; /* Smaller font size for the large number */
     }
     button {
         padding: 0.75rem 1.5rem; /* Slightly less padding inside the button */
@@ -108,12 +110,5 @@ button:hover, button:focus {
         font-size: 1rem;
     }
     #question-number {
-        font-size: 5rem;
-        top: -3rem; /* Adjust the position for smaller screens */
-        right: -3rem; /* Adjust the position for smaller screens */
-    }
-    button {
-        padding: 0.75rem 1rem;
-        font-size: 0.8rem;
-    }
-}
+        font-size: 4rem; /* Further reduced font size for very small screens */
+        transform: translate(30%, -50%); /* Adjust position to keep it within the container
