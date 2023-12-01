@@ -21,6 +21,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%; /* Full width */
+    max-width: 500px; /* Maximum width of the container */
 }
 
 /* Style the heading */
@@ -28,6 +30,7 @@ h1 {
     color: #FB5581; /* A darker shade of pink for the heading */
     font-size: 2.5em; /* Larger font size for the heading */
     margin-bottom: 0.5em; /* Space below the heading */
+    text-align: center; /* Center the text */
 }
 
 /* Style the subheading */
@@ -35,6 +38,7 @@ p {
     color: #333; /* Darker text color for contrast */
     font-size: 1em; /* Standard font size for the paragraph */
     margin-bottom: 2em; /* Space below the paragraph */
+    text-align: center; /* Center the text */
 }
 
 /* Style the question container */
@@ -45,14 +49,13 @@ p {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
     margin-bottom: 2em; /* Space below the container */
     position: relative; /* To position the number absolutely inside this container */
-    width: 100%; /* Full width */
-    max-width: 500px; /* Maximum width of the container */
 }
 
 /* Style the question text */
 #question {
     color: #333; /* Darker text color for the question */
     font-size: 1.25em; /* Larger font size for the question */
+    margin-bottom: 1em; /* Space below the question text */
 }
 
 /* Style the large question number */
@@ -73,6 +76,7 @@ button {
     font-size: 1em; /* Standard font size for the button */
     cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.3s ease; /* Smooth transition for the background color */
+    text-align: center; /* Center the text */
 }
 
 /* Button hover and focus styles */
@@ -84,10 +88,10 @@ button:hover, button:focus {
 /* Responsive styles */
 @media (max-width: 600px) {
     h1 {
-        font-size: 2em; /* Slightly smaller font size for the heading */
+        font-size: 2em; /* Smaller font size for the heading */
     }
     #question {
-        font-size: 1em; /* Slightly smaller font size for the question */
+        font-size: 1em; /* Smaller font size for the question */
     }
     #question-number {
         font-size: 3em; /* Smaller font size for the large number */
@@ -96,5 +100,6 @@ button:hover, button:focus {
     }
     button {
         padding: 0.75em 1.5em; /* Slightly less padding inside the button */
+        font-size: 0.9em; /* Smaller font size for the button */
     }
 }
