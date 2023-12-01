@@ -1,0 +1,79 @@
+/* General Body Styles */
+body {
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Slightly off-black text for easier reading */
+    font-family: 'Helvetica', 'Arial', sans-serif; /* Clean, sans-serif font */
+}
+
+/* Container for Centering Content */
+.container {
+    max-width: 800px; /* Good width for readability */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding around the content */
+}
+
+/* Header Styles */
+h1 {
+    font-size: 2em; /* Large, prominent size */
+    text-align: center; /* Center-align the title */
+    margin-bottom: 0.5em; /* Spacing below the title */
+}
+
+/* Paragraph Styles */
+p {
+    font-size: 1em; /* Standard font size */
+    line-height: 1.5; /* Space between lines for readability */
+    text-align: center; /* Center-align text */
+    margin-bottom: 1.5em; /* Spacing below paragraphs */
+}
+
+/* Question Box Styles */
+#question {
+    background-color: #f8f8f8; /* Light grey background for the question box */
+    color: #222222; /* Darker text for contrast */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    margin-bottom: 2em; /* Spacing below the question box */
+}
+
+/* Button Styles */
+button {
+    background-color: #333333; /* Black background for the button */
+    color: #ffffff; /* White text for contrast */
+    padding: 10px 20px;
+    border: none; /* No border */
+    border-radius: 5px; /* Slightly rounded corners */
+    font-size: 1em;
+    cursor: pointer; /* Cursor changes to pointer to indicate it's clickable */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #444444; /* Slightly lighter black on hover */
+}
+
+/* Focus Styles for Accessibility */
+button:focus {
+    outline: 2px solid #555555; /* Outline when the button is focused */
+}
+
+/* Responsive design: Adjusts the font size for smaller devices */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.75em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    #question {
+        padding: 15px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
