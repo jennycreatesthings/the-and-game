@@ -1,13 +1,13 @@
 /* Existing styles */
 /* Reset some default styles */
-* {
+* {{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+}}
 
 /* Apply a full height to the body with Flexbox to center content vertically and horizontally */
-body {
+body {{
     background-color: #FADCD9; /* Pastel pink background */
     font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern, sans-serif font */
     display: flex;
@@ -15,44 +15,129 @@ body {
     justify-content: center;
     min-height: 100vh;
     padding: 20px; /* Add some padding around the edges */
-}
+}}
 
 /* Center the content in a flex container */
-.container {
+.container {{
     text-align: center;
     width: 100%;
     max-width: 500px; /* Maximum width of the container */
-}
+}}
 
 /* Style the heading */
-h1 {
+h1 {{
     color: #FB5581; /* A darker shade of pink for the heading */
     font-size: 2.5rem; /* Larger font size for the heading */
     margin-bottom: 1rem; /* Space below the heading */
-}
+}}
 
 /* Style the subheading */
-p {
+p {{
     color: #333; /* Darker text color for contrast */
-    /* ... (remaining existing styles) */
+    font-size: 1rem; /* Standard font size for the paragraph */
+    margin-bottom: 2rem; /* Space below the paragraph */
+}}
 
-/* Styling for the number element */
+/* Style the question container */
+#question-container {{
+    background-color: #fff; /* White background for the question container */
+    border-radius: 15px; /* Rounded corners for the container */
+    padding: 2rem; /* Padding inside the container */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    margin-bottom: 2rem; /* Space below the container */
+    position: relative; /* To position the number absolutely inside this container */
+}}
+
+/* Style the question text */
+#question {{
+    color: #333; /* Darker text color for the question */
+    font-size: 1.25rem; /* Larger font size for the question */
+    margin-bottom: 1rem; /* Space below the question text */
+}}
+
+/* Style the large question number */
+#question-number {{
+    color: #FB5581; /* A darker shade of pink for the number */
+    font-size: 3rem; /* Adjusted font size for the number */
+    position: absolute; /* Position absolutely to place it outside the container */
+    top: 50%; /* Center vertically */
+    right: 0; /* Align to the right edge of the container */
+    transform: translate(50%, -50%); /* Adjust the placement to float over the right edge */
+    opacity: 0.2; /* Light opacity for the number */
+    z-index: -1; /* Place it behind the text box */
+}}
+
+/* Style the button */
+button {{
+    background-color: #FB5581; /* Darker pink for the button */
+    color: #fff; /* White text color for the button */
+    padding: 1rem 2rem; /* Padding inside the button */
+    border-radius: 9999px; /* Fully rounded corners for the button */
+    font-size: 1rem; /* Standard font size for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for the background color */
+    width: 100%; /* Full width */
+    max-width: 300px; /* Maximum width for the button */
+}}
+
+/* Button hover and focus styles */
+button:hover, button:focus {{
+    background-color: #ff669a; /* Lighter pink on hover/focus */
+    outline: none; /* Remove outline on focus */
+}}
+
+/* Responsive styles */
+@media (max-width: 768px) {{
+    h1 {{
+        font-size: 2rem; /* Smaller font size for the heading */
+    }}
+    #question-number {{
+        font-size: 5rem; /* Smaller font size for the large number */
+    }}
+    button {{
+        padding: 0.75rem 1.5rem; /* Slightly less padding inside the button */
+        font-size: 0.9rem; /* Smaller font size for the button */
+    }}
+}}
+
+@media (max-width: 480px) {{
+    h1 {{
+        font-size: 1.75rem;
+    }}
+    p {{
+        font-size: 0.9rem;
+    }}
+    #question {{
+        font-size: 1rem;
+    }}
+    #question-number {{
+        font-size: 4rem; /* Further reduced font size for very small screens */
+        transform: translate(30%, -50%); /* Adjust position to keep it within the container bounds */
+    }}
+    button {{
+        padding: 0.75rem 1rem;
+        font-size: 0.8rem;
+    }}
+}}
+
+
+/* Styling for the number element inside the question box */
 #question-number {
     position: absolute;
-    top: 20px; /* Distance from the top of the container */
-    right: 20px; /* Distance from the right of the container */
-    font-size: 1em; /* Example font size, adjust as needed */
-    color: #333; /* Example text color, adjust as needed */
-    /* Add any additional styling you need here */
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%); /* Centers the element on the top right corner */
+    font-size: 0.75em; /* Smaller font size for the number */
+    color: #FB5581; /* Adjust the color to match the design */
+    background: transparent; /* No background to interfere with the question box */
+    z-index: 2; /* Ensures the number is above other elements */
 }
 
 /* Responsive adjustments for smaller screens */
 @media screen and (max-width: 600px) {
     #question-number {
-        top: 40px; /* Increased distance from the top for mobile */
-        right: 10px; /* Adjusted distance from the right for mobile */
-        font-size: 1.5em; /* Smaller font size for mobile, adjust as needed */
-        /* Adjust any other properties as needed for mobile */
+        font-size: 0.75em; /* Adjust if necessary for mobile */
     }
 }
+
 
