@@ -58,7 +58,7 @@ p {{
 /* Style the large question number */
 #question-number {{
     color: #FB5581; /* A darker shade of pink for the number */
-    font-size: 3rem; /* Adjusted font size for the number */
+    font-size: 5rem; /* Adjusted font size for the number */
     position: absolute; /* Position absolutely to place it outside the container */
     top: 50%; /* Center vertically */
     right: 0; /* Align to the right edge of the container */
