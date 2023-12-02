@@ -35,23 +35,84 @@ h1 {
 p {
     color: #333; /* Darker text color for contrast */
     /* ... (remaining existing styles) */
+}
 
 /* Styling for the number element */
 #question-number {
     position: absolute;
-    top: 20px; /* Distance from the top of the container */
-    right: 20px; /* Distance from the right of the container */
-    font-size: 2em; /* Example font size, adjust as needed */
-    color: #333; /* Example text color, adjust as needed */
-    /* Add any additional styling you need here */
+    top: 50%; /* Adjusted to center vertically */
+    right: 10%; /* Adjusted to place inside the circle */
+    font-size: 3rem; /* Adjusted font size to match the circle size */
+    color: #FB5581; /* Pink color to match the theme */
+    transform: translate(50%, -50%); /* Center the element to the exact position */
+    z-index: 10; /* Ensure the number is above other elements */
 }
 
 /* Responsive adjustments for smaller screens */
 @media screen and (max-width: 600px) {
     #question-number {
-        top: 40px; /* Increased distance from the top for mobile */
-        right: 10px; /* Adjusted distance from the right for mobile */
-        font-size: 1.5em; /* Smaller font size for mobile, adjust as needed */
-        /* Adjust any other properties as needed for mobile */
+        top: 50%; /* Center vertically */
+        right: 10%; /* Adjusted for smaller screens */
+        font-size: 2rem; /* Adjusted for smaller screens */
+        transform: translate(50%, -50%); /* Keep element centered */
+    }
+}
+/* Existing styles */
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a full height to the body with Flexbox to center content vertically and horizontally */
+body {
+    background-color: #FADCD9; /* Pastel pink background */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern, sans-serif font */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px; /* Add some padding around the edges */
+}
+
+/* Center the content in a flex container */
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 500px; /* Maximum width of the container */
+}
+
+/* Style the heading */
+h1 {
+    color: #FB5581; /* A darker shade of pink for the heading */
+    font-size: 2.5rem; /* Larger font size for the heading */
+    margin-bottom: 1rem; /* Space below the heading */
+}
+
+/* Style the subheading */
+p {
+    color: #333; /* Darker text color for contrast */
+    /* ... (remaining existing styles) */
+}
+
+/* Styling for the number element */
+#question-number {
+    position: absolute;
+    top: 50%; /* Adjusted to center vertically */
+    right: 10%; /* Adjusted to place inside the circle */
+    font-size: 3rem; /* Adjusted font size to match the circle size */
+    color: #FB5581; /* Pink color to match the theme */
+    transform: translate(50%, -50%); /* Center the element to the exact position */
+    z-index: 10; /* Ensure the number is above other elements */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 600px) {
+    #question-number {
+        top: 50%; /* Center vertically */
+        right: 10%; /* Adjusted for smaller screens */
+        font-size: 2rem; /* Adjusted for smaller screens */
+        transform: translate(50%, -50%); /* Keep element centered */
     }
 }
