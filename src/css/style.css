@@ -41,7 +41,7 @@ p {
     position: absolute;
     top: 20px; /* Distance from the top of the container */
     right: 20px; /* Distance from the right of the container */
-    font-size: 2em; /* Example font size, adjust as needed */
+    font-size: 1em; /* Example font size, adjust as needed */
     color: #333; /* Example text color, adjust as needed */
     /* Add any additional styling you need here */
 }
