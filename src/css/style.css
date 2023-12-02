@@ -68,17 +68,6 @@ p {
     background-color: #ff6699; /* Lighter pink on hover */
 }
 
-/* Styling for the number element */
-#question-number {
-    position: absolute;
-    top: 15%; /* Adjusted to place the number above the question box */
-    left: 50%; /* Start at the halfway point of the screen */
-    transform: translate(-50%, -50%); /* Center the number exactly at the position */
-    font-size: 3rem; /* Large font size to be clearly visible */
-    color: #FFC0CB; /* Lighter pink color for the number */
-    z-index: 10; /* Ensure the number is above other elements */
-}
-
 /* Responsive adjustments for smaller screens */
 @media screen and (max-width: 600px) {
     h1 {
@@ -96,8 +85,5 @@ p {
     .next-question-button {
         padding: 0.5rem 1rem; /* Smaller padding for the button on mobile */
     }
-
-    #question-number {
-        font-size: 2rem; /* Smaller font size for the question number on mobile */
-    }
 }
+
