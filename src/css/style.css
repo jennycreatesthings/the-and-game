@@ -1,4 +1,3 @@
-/* Existing styles */
 /* Reset some default styles */
 * {
     margin: 0;
@@ -34,85 +33,71 @@ h1 {
 /* Style the subheading */
 p {
     color: #333; /* Darker text color for contrast */
-    /* ... (remaining existing styles) */
+    margin-bottom: 2rem; /* Space below the subheading */
+}
+
+/* Style the question box */
+.question-box {
+    background-color: #fff; /* White background for the question box */
+    border-radius: 10px; /* Rounded corners for the question box */
+    padding: 1rem 2rem; /* Padding inside the question box */
+    margin-bottom: 2rem; /* Space below the question box */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Style the question text */
+.question-text {
+    font-size: 1.25rem; /* Font size for the question text */
+    color: #333; /* Color for the question text */
+    margin-bottom: 1rem; /* Space below the question text */
+}
+
+/* Style the 'Next Question' button */
+.next-question-button {
+    background-color: #FB5581; /* Pink background for the button */
+    color: #fff; /* White text color for the button */
+    padding: 0.75rem 1.5rem; /* Padding inside the button */
+    border: none; /* No border for the button */
+    border-radius: 20px; /* Rounded corners for the button */
+    font-size: 1rem; /* Font size for the button text */
+    cursor: pointer; /* Cursor pointer to indicate it's clickable */
+    transition: background-color 0.3s; /* Transition for a hover effect */
+}
+
+.next-question-button:hover {
+    background-color: #ff6699; /* Lighter pink on hover */
 }
 
 /* Styling for the number element */
 #question-number {
     position: absolute;
-    top: 50%; /* Adjusted to center vertically */
-    right: 10%; /* Adjusted to place inside the circle */
-    font-size: 3rem; /* Adjusted font size to match the circle size */
-    color: #FB5581; /* Pink color to match the theme */
-    transform: translate(50%, -50%); /* Center the element to the exact position */
+    top: 15%; /* Adjusted to place the number above the question box */
+    left: 50%; /* Start at the halfway point of the screen */
+    transform: translate(-50%, -50%); /* Center the number exactly at the position */
+    font-size: 3rem; /* Large font size to be clearly visible */
+    color: #FFC0CB; /* Lighter pink color for the number */
     z-index: 10; /* Ensure the number is above other elements */
 }
 
 /* Responsive adjustments for smaller screens */
 @media screen and (max-width: 600px) {
-    #question-number {
-        top: 50%; /* Center vertically */
-        right: 10%; /* Adjusted for smaller screens */
-        font-size: 2rem; /* Adjusted for smaller screens */
-        transform: translate(50%, -50%); /* Keep element centered */
+    h1 {
+        font-size: 2rem; /* Smaller font size for the heading on mobile */
     }
-}
-/* Existing styles */
-/* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* Apply a full height to the body with Flexbox to center content vertically and horizontally */
-body {
-    background-color: #FADCD9; /* Pastel pink background */
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern, sans-serif font */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 20px; /* Add some padding around the edges */
-}
+    .question-box {
+        padding: 1rem; /* Smaller padding for the question box on mobile */
+    }
 
-/* Center the content in a flex container */
-.container {
-    text-align: center;
-    width: 100%;
-    max-width: 500px; /* Maximum width of the container */
-}
+    .question-text {
+        font-size: 1rem; /* Smaller font size for the question text on mobile */
+    }
 
-/* Style the heading */
-h1 {
-    color: #FB5581; /* A darker shade of pink for the heading */
-    font-size: 2.5rem; /* Larger font size for the heading */
-    margin-bottom: 1rem; /* Space below the heading */
-}
+    .next-question-button {
+        padding: 0.5rem 1rem; /* Smaller padding for the button on mobile */
+    }
 
-/* Style the subheading */
-p {
-    color: #333; /* Darker text color for contrast */
-    /* ... (remaining existing styles) */
-}
-
-/* Styling for the number element */
-#question-number {
-    position: absolute;
-    top: 50%; /* Adjusted to center vertically */
-    right: 10%; /* Adjusted to place inside the circle */
-    font-size: 3rem; /* Adjusted font size to match the circle size */
-    color: #FB5581; /* Pink color to match the theme */
-    transform: translate(50%, -50%); /* Center the element to the exact position */
-    z-index: 10; /* Ensure the number is above other elements */
-}
-
-/* Responsive adjustments for smaller screens */
-@media screen and (max-width: 600px) {
     #question-number {
-        top: 50%; /* Center vertically */
-        right: 10%; /* Adjusted for smaller screens */
-        font-size: 2rem; /* Adjusted for smaller screens */
-        transform: translate(50%, -50%); /* Keep element centered */
+        font-size: 2rem; /* Smaller font size for the question number on mobile */
     }
 }
