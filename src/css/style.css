@@ -38,24 +38,21 @@ p {
 
 /* Styling for the number element */
 #question-number {
-    position: absolute; /* Position relative to the question container */
-    top: 0; /* Align to the top of the question container */
-    right: 0; /* Align to the right of the question container */
-    font-size: 1rem; /* Smaller font size for the number */
-    margin-top: -10px; /* Adjust as needed to move the number outside the box */
-    margin-right: 10px; /* Adjust as needed for spacing from the right edge */
-    color: #FB5581; /* Sample color, change as needed */
-    background: #FADCD9; /* Sample background to match the body, adjust if needed */
-    padding: 2px 5px; /* Small padding around the number */
-    border-radius: 4px; /* Rounded corners for the background */
-    z-index: 10; /* Ensure it's above other elements */
+    position: absolute;
+    top: 20px; /* Distance from the top of the container */
+    right: 20px; /* Distance from the right of the container */
+    font-size: 2em; /* Example font size, adjust as needed */
+    color: #333; /* Example text color, adjust as needed */
+    /* Add any additional styling you need here */
 }
 
-/* Responsive adjustments for smaller screens might not be needed if it looks good, 
-but if you need to adjust for mobile, you can do so here */
+/* Responsive adjustments for smaller screens */
 @media screen and (max-width: 600px) {
     #question-number {
-        font-size: 0.85rem; /* Even smaller on mobile if necessary */
-        /* other adjustments if needed */
+        top: 40px; /* Increased distance from the top for mobile */
+        right: 10px; /* Adjusted distance from the right for mobile */
+        font-size: 1.5em; /* Smaller font size for mobile, adjust as needed */
+        /* Adjust any other properties as needed for mobile */
     }
 }
+
